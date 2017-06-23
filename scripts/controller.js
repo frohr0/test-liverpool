@@ -6,11 +6,9 @@ app.controller('FirstController', function($scope, $http, localStorageService) {
   }else{
     $scope.latestSearch = [];
   }
-  // $scope.latestSearch = [];
   $scope.newSearch = "";
   $scope.objSearch = {};
   $scope.date = new Date();
-
 
   $scope.searchProduct = function(){
     $http.get("https://www.liverpool.com.mx/tienda?s="+$scope.newSearch+"&d3106047a194921c01969dfdec083925=json")

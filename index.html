@@ -5,51 +5,6 @@
     <title>Reto Liverpool</title>
     <link rel="stylesheet" type="text/css" href="styles/basicStyles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="scripts/controller.js"></script>
-  </head>
-  <body ng-controller="FirstController">
-    <section class="markup">
-      <section class="contentFinder">
-        <div class="wrapperFinder">
-          <input type="text" class="inputText" ng-model="newSearch">
-          <button class="btn" ng-click="searchProduct()">Find</button>
-        </div>
-      </section>
-      <section class="contentResult">
-        <div class="wrapperResult">
-          <ul class="listProducts">
-            <li ng-repeat="item in listResults">
-              <!-- <p>{{item.attributes["sku.smallImage"][0]}}</p> -->
-              <div class="left">
-                <figure>
-                  <img src="{{item.attributes['sku.smallImage'][0]}}" height="72" width="72">
-                </figure>
-              </div>
-              <div class="right">
-                <h3 class="Title"> {{item.attributes['product.displayName'][0]}}</h3>
-                <p class="Price">$ {{item.attributes['sku.list_Price'][0]}}</p>
-              </div>
-            </li>
-          </ul> 
-        </div>  
-      </section>
-    </section>
-    <section class="latestResult">
-      <h3>Busquedas recientes</h3>
-      <ul class="latestList">
-        <li ng-repeat="item in latestSearch">
-          <p>{{item.data}} - <label ng-bind="date | date:'dd/MM/yyyy'">{{item.date}}</label></p>
-        </li>
-      </ul>
-    </section> 
-  </body>
-</html><!DOCTYPE html>
-<html ng-app="finderLvp">
-  <head>
-    <meta charset="utf-8">
-    <title>Reto Liverpool</title>
-    <link rel="stylesheet" type="text/css" href="styles/basicStyles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="scripts/angular-local-storage.min.js"></script>
     <script src="scripts/controller.js"></script>
   </head>
