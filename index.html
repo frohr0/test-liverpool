@@ -43,4 +43,54 @@
       </ul>
     </section> 
   </body>
+</html><!DOCTYPE html>
+<html ng-app="finderLvp">
+  <head>
+    <meta charset="utf-8">
+    <title>Reto Liverpool</title>
+    <link rel="stylesheet" type="text/css" href="styles/basicStyles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="scripts/angular-local-storage.min.js"></script>
+    <script src="scripts/controller.js"></script>
+  </head>
+  <body ng-controller="FirstController">
+    <section class="markup">
+      <section class="contentFinder">
+        <div class="wrapperFinder">
+          <form ng-submit="searchProduct()">
+            <input type="text" class="inputText" ng-model="newSearch" placeholder="Buscar por producto, categoría o marca">
+            <input type="submit" class="btn" value="Find"></input>
+          </form>
+        </div>
+      </section>
+      <section class="contentResult">
+        <div class="wrapperResult">
+          <ul class="listProducts">
+            <li ng-repeat="item in listResults">
+              <div class="left">
+                <figure>
+                  <img src="{{item.attributes['sku.smallImage'][0]}}" height="72" width="72">
+                </figure>
+              </div>
+              <div class="right">
+                <h3 class="title"> {{item.attributes['product.displayName'][0]}}</h3>
+                <p class="price">$ {{item.attributes['sku.list_Price'][0]}}</p>
+              </div>
+            </li>
+          </ul> 
+        </div>  
+      </section>
+    </section>
+    <section class="latestResult">
+      <div class="latestHeader">
+        <h3>Tu selección</h3>
+        <button ng-click="clearLatest()">Borrar</button> 
+      </div>
+      <ul class="latestList">
+        <li ng-repeat="item in latestSearch">
+          <p>{{item.data}} <label ng-bind="date | date:'short'">{{item.date}}</label></p>
+        </li>
+      </ul>
+    </section> 
+  </body>
 </html>

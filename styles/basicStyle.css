@@ -4,31 +4,56 @@
 	padding: 0;
 }
 .latestResult{
-	width: 28%;
+	width: 18%;
 	margin: 0;
 	padding: 0;
-	border: 1px solid green;
 }
-.latestResult h3{
+.latestResult .latestHeader h3{
 	padding: 0;
 	margin: 0;
 	text-align: center;
-	text-transform: uppercase;
+	border-bottom: 1px solid #666666;
+	font-size: 1rem;
+	color: #E10098;
+	width: 70%;
+}
+.latestResult .latestHeader button{
+	background: #2f2f2f;
+	color: #F2F2F2;
+	border: 0;
+	display: inline-block;
+	width: 25%;
+}
+.latestResult .latestHeader h3, .latestResult .latestHeader button{
+	display: inline-block;
+	vertical-align: top;
 }
 .latestResult .latestList{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	height: 300px;
+	overflow-y: scroll;
 }
 .latestResult .latestList li{
 	margin: 0;
 	padding: 0;
+	padding-bottom: 5px;
+	background: #F2F2F2;
+}
+.latestResult .latestList li:hover{
+	cursor: pointer;
+	background: #d8d8d8;
 }
 .latestResult .latestList li p{
 	margin: 0;
 	padding: 0;
 	padding-left: 15px;
-	font-size: 19px;
+	color: #666666;
+}
+.latestResult .latestList li label{
+	float: right;
+	font-size: 0.7rem;
 }
 .markup, .latestResult{
 	position: relative;
@@ -41,7 +66,7 @@
 	padding: 0;
 }
 .contentFinder .wrapperFinder{
-	border: 1px solid gray;
+	border: 1px solid #E10098;
 }
 .contentFinder .wrapperFinder, .contentResult .wrapperResult{
 	width: 100%;
@@ -52,11 +77,15 @@
 	width: 90%;
 	padding: 5px 10px;
 	margin: 0;
+	color: #E10098;
 }
 .contentFinder .wrapperFinder .btn{
 	padding: 7px 10px;
 	margin: -4px;
-	width: 7.3%;
+	width: 7.6%;
+	background: #E10098;
+	border: 0;
+	color: white;
 }
 
 .contentResult .wrapperResult{
@@ -71,12 +100,12 @@
 }
 .contentResult .wrapperResult .listProducts li{
 	width: 100%;
-	border-bottom: 1px solid pink;
+	border-bottom: 1px solid #e799c2;
 	height: auto;
 }
 .contentResult .wrapperResult .listProducts li:hover{
 	cursor: pointer;
-	border-left: 5px solid pink;
+	border-left: 5px solid #e799c2;
 }
 .contentResult .wrapperResult .listProducts li .left,
 .contentResult .wrapperResult .listProducts li .right{
@@ -90,4 +119,11 @@
 }
 .contentResult .wrapperResult .listProducts li .right{
 	width: 70%;
+}
+.contentResult .wrapperResult .listProducts li .right .title{
+	color: #666666;
+}
+.contentResult .wrapperResult .listProducts li .right .price{
+	color: #FF0000;
+	font-weight: bold;
 }
