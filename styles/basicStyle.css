@@ -1,0 +1,56 @@
+.contentFinder, .contentResult{
+	width: 70%;
+	margin: 0;
+	padding: 0;
+}
+.contentFinder .wrapperFinder{
+	border: 1px solid gray;
+}
+.contentFinder .wrapperFinder, .contentResult .wrapperResult{
+	width: 90%;
+	margin: 0;
+	padding: 0;
+}
+.contentFinder .wrapperFinder .inputText{
+	width: 90%;
+	padding: 5px 10px;
+	margin: 0;
+}
+.contentFinder .wrapperFinder .btn{
+	padding: 7px 10px;
+	margin: -4px;
+	width: 7.3%;
+}
+
+.contentResult .wrapperResult{
+	height: 400px;
+	overflow-y: scroll;
+	overflow-y: none;
+}
+.contentResult .wrapperResult .listProducts{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.contentResult .wrapperResult .listProducts li{
+	width: 100%;
+	border-bottom: 1px solid pink;
+	height: auto;
+}
+.contentResult .wrapperResult .listProducts li:hover{
+	cursor: pointer;
+	border-left: 5px solid pink;
+}
+.contentResult .wrapperResult .listProducts li .left,
+.contentResult .wrapperResult .listProducts li .right{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+}
+.contentResult .wrapperResult .listProducts li .left{
+	width: auto;
+}
+.contentResult .wrapperResult .listProducts li .right{
+	width: 70%;
+}
